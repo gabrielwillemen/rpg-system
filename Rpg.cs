@@ -1,5 +1,6 @@
 ﻿using System;
-
+using System.Security.Cryptography;
+using Rpg;
 namespace RpgSystem
 {
 
@@ -7,15 +8,17 @@ namespace RpgSystem
     {
         static void Main()
         {
-            Entidade Protagonista = new Entidade();
+            
+    
+            Entidade Protagonista = new Entidade(new Stats(10,10,10,10,"Gabriel", 20, "Mago"));
             Protagonista.CriarProtagonista();
+           //Protagonista.Menu();
             
             Entidade Rival = new Entidade();
-            Rival.CriarRival();
+          //  Rival.CriarRival();
+            //Rival.Menu();
 
             Goblin GoblinSelvagem = new Goblin();
-            Console.WriteLine("Seja bem vindo ao mundo de Autrora,");
-            Console.WriteLine($"O mundo começa com um duelo contra o seu rival\n {Protagonista} vs {Rival} "); // ainda não funciona
             
             // Protagonista.Menu();  Isso aqui é uma função para status
         }
