@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Dynamic;
 using System.Security.Cryptography;
+using System.Security.Cryptography.X509Certificates;
 using Rpg;
 namespace RpgSystem
 {
@@ -11,16 +13,26 @@ namespace RpgSystem
             
     
             Entidade Protagonista = new Entidade(new Stats(10,10,10,10,"Gabriel", 20, "Mago"));
-            Protagonista.CriarProtagonista();
-           //Protagonista.Menu();
-            
-            Entidade Rival = new Entidade();
-          //  Rival.CriarRival();
-            //Rival.Menu();
+            Protagonista.CriarProtagonista(); 
 
-            Goblin GoblinSelvagem = new Goblin();
+             bool GameON = true; 
             
-            // Protagonista.Menu();  Isso aqui é uma função para status
+
+            while (GameON)
+            {
+
+                Console.WriteLine("O que você quer fazer?");
+                string Action = Console.ReadLine();
+                switch (Action) {
+                    case "Lutar":
+                    Console.WriteLine("Bem vindo ao duelo");
+                    break;
+                    case "Encerrar": 
+                     GameON = false;
+                    break;
+            }
+           
         }
     }
+}
 }
