@@ -3,7 +3,7 @@ using Rpg;
 
 namespace RpgSystem
 {
-    class mob
+    abstract class Mob
     {
         public double hp {get; set;}
         public double defense {get; set;}
@@ -14,7 +14,7 @@ namespace RpgSystem
 
     
 
-        public mob ()
+        public Mob()
         {
             this.hp = hp;
             this.defense = defense;
@@ -24,9 +24,9 @@ namespace RpgSystem
             this.specialdefense = specialdefense;
         }
 
-    public void atacar()
-        {
+    public abstract void Atacar();
+        
             
-        }
+        
     }
 }

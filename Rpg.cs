@@ -26,6 +26,7 @@ namespace RpgSystem
                 switch (Action) {
                     case "Lutar":
                     Console.WriteLine("Bem vindo ao duelo");
+                    
                     break;
                     case "Encerrar": 
                      GameON = false;
